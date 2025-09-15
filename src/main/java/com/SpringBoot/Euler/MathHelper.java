@@ -17,5 +17,5 @@ public class MathHelper {
         }
         return true;
     }
-
+    .
 }
