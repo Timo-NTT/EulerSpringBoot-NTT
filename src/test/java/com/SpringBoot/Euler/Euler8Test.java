@@ -15,4 +15,7 @@ public class Euler8Test {
 
     @Test
     void checkHighestSumOf13DigitsInARow() {
-
+        long result = euler8.highestSumOf13DigitsInARow();
+        assertEquals(23514624000L, result);
+    }
+}
