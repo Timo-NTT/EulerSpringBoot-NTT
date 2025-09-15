@@ -53,7 +53,7 @@ public class HomeController {
      * @return JSON with the result
      */
     @GetMapping(value = "/euler8", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Long> test2() {
+    public ResponseEntity<Long> ControllerEuler8() {
 
         // N-te Primzahl berechnen
         long result = euler8.highestSumOf13DigitsInARow();
