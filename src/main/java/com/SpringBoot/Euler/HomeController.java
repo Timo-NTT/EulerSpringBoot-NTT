@@ -24,6 +24,9 @@ public class HomeController {
     @Autowired
     private Euler8 euler8;
 
+    @Autowired
+    private Euler9 euler9;
+
     /**
      * Define the URL.
      *
@@ -54,10 +57,18 @@ public class HomeController {
      */
     @GetMapping(value = "/euler8", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Long> ControllerEuler8() {
-
-        // N-te Primzahl berechnen
         long result = euler8.highestSumOf13DigitsInARow();
+        return ResponseEntity.ok(result);
+    }
 
+    /**
+     * Handles GET requests to "/euler9" and returns the result of the Pythagorean triplet calculation.
+     *
+     * @return HTTP 200 response with the product of the triplet as JSON.
+     */
+    @GetMapping(value = "/euler9", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Long> ControllerEuler9() {
+        long result = euler9.pythagoreischesTriplet();
         return ResponseEntity.ok(result);
     }
 }

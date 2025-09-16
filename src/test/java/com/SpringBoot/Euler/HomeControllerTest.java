@@ -37,10 +37,10 @@ class HomeControllerTest {
     }
 
     @Test
-    void ControllerEuler8Test() throws Exception {
-        when(euler8.highestSumOf13DigitsInARow()).thenReturn(23514624000L);
+    void controllerEuler8Test() throws Exception {
+        when(euler8.highestSumOf13DigitsInARow()).thenReturn(3L);
         ResponseEntity<Long> response = homeController.ControllerEuler8();
         assertEquals(200, response.getStatusCodeValue());
-        assertEquals(23514624000L, response.getBody());
+        assertEquals(3L, response.getBody());
     }
 }
