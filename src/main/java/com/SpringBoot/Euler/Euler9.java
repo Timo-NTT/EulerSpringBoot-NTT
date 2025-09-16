@@ -5,6 +5,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class Euler9 {
 
+    /**
+     * Returns the product of the Pythagorean triplet (a, b, c) where a + b + c = 1000.
+     * A Pythagorean triplet satisfies a² + b² = c².
+     *
+     * @return The product a * b * c, or 0 if no triplet is found.
+     */
     public int pythagoreischesTriplet() {
         for (int a = 1; a < 300; a++) {
             for (int b = 1; b < 400; b++) {
