@@ -38,6 +38,6 @@ public class Euler7Test {
 
     @Test
     void invalidBehavior() {
-        assertThrows(IOException.class, ()-> euler7.getNthPrimeNumber(-2) );
+        assertThrows(IOException.class, () -> euler7.getNthPrimeNumber(-2));
     }
 }
