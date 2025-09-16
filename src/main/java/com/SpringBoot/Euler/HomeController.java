@@ -24,6 +24,9 @@ public class HomeController {
     @Autowired
     private Euler8 euler8;
 
+    @Autowired
+    private Euler9 euler9;
+
     /**
      * Define the URL.
      *
@@ -57,6 +60,15 @@ public class HomeController {
 
         // N-te Primzahl berechnen
         long result = euler8.highestSumOf13DigitsInARow();
+
+        return ResponseEntity.ok(result);
+    }
+
+    @GetMapping(value = "/euler9", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<Long> ControllerEuler9() {
+
+        // N-te Primzahl berechnen
+        long result = euler9.pythagoreischesTriplet();
 
         return ResponseEntity.ok(result);
     }

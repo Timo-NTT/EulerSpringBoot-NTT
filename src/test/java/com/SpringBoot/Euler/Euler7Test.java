@@ -37,7 +37,7 @@ public class Euler7Test {
     }
 
     @Test
-    void invalidBehavier() {
+    void invalidBehavior() {
         assertThrows(IOException.class, ()-> euler7.getNthPrimeNumber(-2) );
     }
 }
