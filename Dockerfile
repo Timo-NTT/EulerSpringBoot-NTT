@@ -1,14 +1,15 @@
 FROM amazoncorretto:21-alpine-jdk
 
-USER root
-WORKDIR /
+RUN apk add --no-cache curl
+# Arbeitsverzeichnis im Container setzen
+WORKDIR /app
 
-# COPY the java startup script
-COPY scripts/entrypoint-services.sh .
 
-# COPY the built java application
-COPY build/libs/evp-backend-LOCAL-BUILD.jar /opt/
 
-# Start up Invoice-Service
-ENTRYPOINT [ "/bin/sh" ]
-CMD [ "/entrypoint-services.sh" ]
+# Script und JAR ins Image kopieren
+COPY entrypoint.sh /app/entrypoint.sh
+COPY target/entrypoint.jar /app/app.jar
+
+# Script ausführbar machen
+RUN chmod +x /app/entrypoint.sh
+
