@@ -21,7 +21,6 @@ public class Euler8 {
      * @return The largest product found.
      */
     public long highestSumOf13DigitsInARow() {
-        //System.out.println(digitString);
         this.digitString = reader.loadNumberFromFile(fileName).replace("\n", "");
         for (int i = 0; i < this.digitString.length() - NumberOfDigitsYouWantMultiplied; i++) {
             highestNumber = checksProductOfNNumbersAfterI(i);
